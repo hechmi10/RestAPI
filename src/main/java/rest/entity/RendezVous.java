@@ -1,7 +1,5 @@
 package rest.entity;
 
-import rest.entity.Logement;
-
 import java.util.Objects;
 
 public class RendezVous {
