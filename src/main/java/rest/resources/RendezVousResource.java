@@ -1,6 +1,6 @@
-package resources;
+package rest.resources;
 
-import entity.RendezVous;
+import rest.entity.RendezVous;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;

@@ -1,6 +1,6 @@
-package resources;
+package rest.resources;
 
-import entity.Logement;
+import rest.entity.Logement;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -14,20 +14,17 @@ public class LogementResource {
 
     private static List<Logement> logements = new ArrayList<>();
 
-    // Création d'un nouveau logement
     @POST
     public Response createLogement(Logement logement) {
         logements.add(logement);
         return Response.status(Response.Status.CREATED).build();
     }
 
-    // Récupération de la liste de tous les logements
     @GET
     public List<Logement> getAllLogements() {
         return logements;
     }
 
-    // Récupération de logements par délégation
     @GET
     @Path("/search")
     public List<Logement> getLogementsByDelegation(@QueryParam("delegation") String delegation) {
@@ -40,7 +37,6 @@ public class LogementResource {
         return result;
     }
 
-    // Suppression d'un logement
     @DELETE
     @Path("/{reference}")
     public Response deleteLogement(@PathParam("reference") int reference) {
@@ -59,7 +55,6 @@ public class LogementResource {
         }
     }
 
-    // Mise à jour d'un logement
     @PUT
     @Path("/{reference}")
     public Response updateLogement(@PathParam("reference") int reference, Logement logement) {
