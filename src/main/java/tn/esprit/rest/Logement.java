@@ -1,4 +1,4 @@
-package rest.entity;
+package tn.esprit.rest;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 

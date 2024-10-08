@@ -1,4 +1,4 @@
-package rest.entity;
+package tn.esprit.rest;
 
 import java.util.Objects;
 

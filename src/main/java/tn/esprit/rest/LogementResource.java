@@ -1,6 +1,4 @@
-package rest.resources;
-
-import rest.entity.Logement;
+package tn.esprit.rest;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
