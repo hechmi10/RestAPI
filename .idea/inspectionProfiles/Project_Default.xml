@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="IncorrectHttpHeaderInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="customHeaders">
+        <set>
+          <option value="&lt;logement&gt;" />
+          <option value="&lt;reference&gt;1&lt;/reference&gt;" />
+          <option value="&lt;adresse&gt; 27, Rue des roses &lt;/adresse&gt;" />
+          <option value="&lt;gouvernorat&gt; Ariana &lt;/gouvernorat&gt;" />
+        </set>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

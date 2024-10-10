@@ -1,3 +1,138 @@
+POST http://localhost:8060/rest/logements
+Content-Type: application/xml
+Content-Length: 246
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<logement>
+<reference>1</reference>
+<adresse> 27, Rue des roses </adresse>
+<gouvernorat> Ariana </gouvernorat>
+<type>Studio</type>
+<description> cuisine equipee </description>
+<prix> 300 </prix>
+<deleguation> El ghazela </deleguation>
+</logement>
+
+<> 2024-10-10T113140.404.html
+
+###
+
+POST http://localhost/rest/logements
+Content-Type: application/xml
+Content-Length: 246
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<logement>
+<reference>1</reference>
+<adresse> 27, Rue des roses </adresse>
+<gouvernorat> Ariana </gouvernorat>
+<type>Studio</type>
+<description> cuisine equipee </description>
+<prix> 300 </prix>
+<deleguation> El ghazela </deleguation>
+</logement>
+
+<> 2024-10-10T113126.404.html
+
+###
+
+PUT http://localhost:8060/RestAPI_war_exploded/rest/logements/1
+Content-Type: application/xml
+Content-Length: 241
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<logement>
+<reference>1</reference>
+<adresse> 30, Rue des nilles </adresse>
+<gouvernorat> Nabeul </gouvernorat>
+<type>S+2</type>
+<description> cuisine equipee </description>
+ <prix> 500 </prix>
+ <delegation> Nabeul </delegation>
+ </logement>
+
+<> 2024-10-10T112902.404.html
+
+###
+
+POST http://localhost/rest/logements
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-09T205438.404.html
+
+###
+
+GET http://localhost/rest/logements
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-09T205428.404.html
+
+###
+
+POST http://localhost:8080/logements
+Content-Type: application/xml
+Content-Length: 274
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<logement>
+    <reference>1</reference>
+    <adresse> 27, Rue des roses </adresse>
+    <gouvernorat> Ariana </gouvernorat>
+    <type>Studio</type>
+    <description> cuisine equipee </description>
+    <prix> 300 </prix>
+    <deleguation> El ghazela </deleguation>
+</logement>
+
+<> 2024-10-09T205347.404.html
+
+###
+
+POST http://localhost:8080/logements
+Content-Type: application/xml
+Content-Length: 274
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<logement>
+    <reference>1</reference>
+    <adresse> 27, Rue des roses </adresse>
+    <gouvernorat> Ariana </gouvernorat>
+    <type>Studio</type>
+    <description> cuisine equipee </description>
+    <prix> 300 </prix>
+    <deleguation> El ghazela </deleguation>
+</logement>
+
+<> 2024-10-08T130343.404.html
+
+###
+
+GET http://localhost/rest/logements/search?delegation=hXA57G7D
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-08T123416.404.html
+
+###
+
 GET http://localhost:8080/rest/logements
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
 Accept-Encoding: br, deflate, gzip, x-gzip
