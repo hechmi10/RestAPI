@@ -28,6 +28,18 @@ public class RessourceLogement {
         return logB.getLogements().size() != 0 ? Response.status(Status.OK).entity(logB.getLogements()).build() : Response.status(Status.NO_CONTENT).build();
     }
 
+    @GET
+    public Response getLogementsByDelegation(@QueryParam("delegation") String delegation) {
+         List<Logement> l=logB.getLogementsByDeleguation(delegation);
+         return !l.isEmpty() ? Response.status(Status.OK).build() :Response.status(Status.NOT_FOUND).build();
+    }
+
+    @GET
+    public Response getLogementsListByRef(@QueryParam("reference") int reference){
+        List<Logement> l=logB.getLogementsListeByref(reference);
+        return !l.isEmpty()? Response.status(Status.OK).build():Response.status(Status.NOT_FOUND).build();
+    }
+
     @PUT
     @Path("/{id}")
     @Consumes("{application/xml}")

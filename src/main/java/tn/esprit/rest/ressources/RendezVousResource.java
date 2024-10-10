@@ -16,7 +16,6 @@ public class RendezVousResource {
     private static List<RendezVous> rendezVousList = new ArrayList<>();
     private RendezVousBusiness rvB=new RendezVousBusiness();
 
-    // Création d'un nouveau rendez-vous
     @POST
     public Response createRendezVous(RendezVous rendezVous) {
         return rvB.addRendezVous(rendezVous) ? Response.ok().build() : Response.status(Response.Status.BAD_REQUEST).build();
