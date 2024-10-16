@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Path("/rendezvous")
+@Path("rendezvous")
 @Produces("application/json")
 @Consumes("application/json")
 public class RendezVousResource {

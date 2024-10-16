@@ -37,9 +37,9 @@
         xmlhttp.send(null);
     }
     xmlhttp.onreadystatechange = function() {
-        var reference = document. getElementByTd("reference");
-        var adresse = document. getElementByTd("adresse");
-        var gouvernorat = document. getElementByTd("gouvernorat");
+        var reference = document. getElementById("reference");
+        var adresse = document. getElementById("adresse");
+        var gouvernorat = document. getElementById("gouvernorat");
         if (xmlhttp.readystate == 4) {
             if (xmlhttp. status == 200) {
                 var resultat = JSON. parse(xmlhttp.responseText);

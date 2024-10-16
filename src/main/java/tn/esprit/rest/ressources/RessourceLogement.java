@@ -26,7 +26,7 @@ public class RessourceLogement {
         return logB.addLogement(logement) ? Response.status(Status.CREATED).build() : Response.status(Status.NOT_FOUND).build();
     }
 
-
+    @Secured
     @GET
     @Produces({"application/json"})
     public Response getAllLogements() {
