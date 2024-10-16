@@ -6,6 +6,8 @@ import java.util.List;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+
+import tn.esprit.rest.filtres.Secured;
 import tn.esprit.rest.metiers.LogementBusiness;
 
 @Path("logements")
@@ -22,6 +24,7 @@ public class RessourceLogement {
         return logB.addLogement(logement) ? Response.status(Status.CREATED).build() : Response.status(Status.NOT_FOUND).build();
     }
 
+    @Secured
     @GET
     @Produces({"application/json"})
     public Response getAllLogements() {
@@ -40,14 +43,14 @@ public class RessourceLogement {
         return !l.isEmpty()? Response.status(Status.OK).build():Response.status(Status.NOT_FOUND).build();
     }
 
-    /*@PUT
+    @PUT
     @Path("/{id}")
     @Consumes("{application/xml}")
     public Response updateLogement(@PathParam("id") int reference, Logement logement) {
         return logB.updateLogement(reference,logement) ? Response.status(Status.OK).build() : Response.status(Status.NOT_FOUND).build();
-    }*/
+    }
 
-    /*@DELETE
+    @DELETE
     @Path("{id}")
     public Response deleteLogement(@PathParam("id") int reception) {
         return logB.deleteLogement(reception) ? Response.status(Status.OK).build() : Response.status(Status.NOT_FOUND).build();

@@ -31,7 +31,7 @@ public class RendezVousResource {
     public Response getRendezVousByLogement(@QueryParam("refLogement") int refLogement) {
         rvB.getListeRendezVousByLogementReference(refLogement);
         return Response.ok().build();
-    }*/
+    }
 
     // Suppression d'un rendez-vous
     @DELETE
@@ -45,6 +45,6 @@ public class RendezVousResource {
     @Path("/{id}")
     public Response updateRendezVous(@PathParam("id") int id, RendezVous rendezVous) {
         return rvB.updateRendezVous(id,rendezVous) ? Response.ok().build() : Response.status(Response.Status.BAD_REQUEST).build();
-    }
+    }*/
 }
 

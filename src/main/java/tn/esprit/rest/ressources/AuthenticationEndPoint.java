@@ -11,6 +11,8 @@ import javax.ws.rs.core.UriInfo;
 import java.time.ZoneId;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import tn.esprit.rest.entities.Credentials;
+
 @Path("authentication")
 public class AuthenticationEndPoint {
  @Context
@@ -40,10 +42,10 @@ public class AuthenticationEndPoint {
      String jwtToken = Jwts.builder()
              .setSubject(username)
              .setIssuer(uriInfo.getAbsolutePath().toString())
-                 .setIssuedAt(new Date())
-                 .setExpiration(toDate(LocalDateTime.now().plusMinutes(15L)))
-                 .signWith(SignatureAlgorithm.HS512, key)
-                 .compact();
+             .setIssuedAt(new Date())
+             .setExpiration(toDate(LocalDateTime.now().plusMinutes(15L)))
+             .signWith(SignatureAlgorithm.HS512, key)
+             .compact();
          System.out.println("the returned token is : " + jwtToken);
          return jwtToken;
      }
