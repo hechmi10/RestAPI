@@ -28,7 +28,7 @@ public class RessourceLogement {
         return logB.getLogements().size() != 0 ? Response.status(Status.OK).entity(logB.getLogements()).build() : Response.status(Status.NO_CONTENT).build();
     }
 
-    @GET
+    /*@GET
     public Response getLogementsByDelegation(@QueryParam("delegation") String delegation) {
          List<Logement> l=logB.getLogementsByDeleguation(delegation);
          return !l.isEmpty() ? Response.status(Status.OK).build() :Response.status(Status.NOT_FOUND).build();
@@ -40,17 +40,17 @@ public class RessourceLogement {
         return !l.isEmpty()? Response.status(Status.OK).build():Response.status(Status.NOT_FOUND).build();
     }
 
-    @PUT
+    /*@PUT
     @Path("/{id}")
     @Consumes("{application/xml}")
     public Response updateLogement(@PathParam("id") int reference, Logement logement) {
         return logB.updateLogement(reference,logement) ? Response.status(Status.OK).build() : Response.status(Status.NOT_FOUND).build();
-    }
+    }*/
 
-    @DELETE
+    /*@DELETE
     @Path("{id}")
     public Response deleteLogement(@PathParam("id") int reception) {
         return logB.deleteLogement(reception) ? Response.status(Status.OK).build() : Response.status(Status.NOT_FOUND).build();
-    }
+    }*/
 }
 

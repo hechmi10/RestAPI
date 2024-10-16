@@ -68,8 +68,8 @@ public class RendezVousBusiness {
 
     public boolean deleteRendezVous(int id) {
         Iterator<RendezVous> iterator = listeRendezVous.iterator();
-
         RendezVous r;
+
         do {
             if (!iterator.hasNext()) {
                 return false;

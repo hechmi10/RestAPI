@@ -27,11 +27,11 @@ public class RendezVousResource {
         return rvB.getListeRendezVous() ? Response.status(Response.Status.OK).build() : Response.status(Response.Status.NOT_FOUND).build();
     }
 
-    @GET
+    /*@GET
     public Response getRendezVousByLogement(@QueryParam("refLogement") int refLogement) {
         rvB.getListeRendezVousByLogementReference(refLogement);
         return Response.ok().build();
-    }
+    }*/
 
     // Suppression d'un rendez-vous
     @DELETE
