@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logements</title>
+</head>
+<body onload="init()">
+<h1>Tester Service Logement (client REST)</h1>
+<table>
+    <tr>
+        <td>Saisir Delegation :</td>
+        <td><input type="text" id="delegation" size="10"/><input type="button" value="OK" onclick="getDetails()"/></td>
+    </tr>
+    <tr>
+        <td> Reference :  </td>
+        <td><input type="text" readonly="true" id="reference"/></td>
+    </tr>
+    <tr>
+        <td> Adresse : </td>
+        <td><textarea id="adresse"></textarea></td>
+    </tr>
+    <tr>
+        <td> Gouvernorat : </td>
+        <td><input type="text" readonly="true" id="gouvernorat"/></td>
+    </tr>
+</table>
+</body>
+<script>
+    var xmlhttp;
+    function init() {
+        xmlhttp = new XMLHttpRequest();
+    }
+    function getDetails () {
+        var delegation = document.getElementById("delegation");
+        var url = "http://localhost:8060/RestAPI_war_exploded/logements?delegation="+ delegation.value;
+        xmlhttp.open('GET',url,true);
+        xmlhttp.send(null);
+    }
+    xmlhttp.onreadystatechange = function() {
+        var reference = document. getElementByTd("reference");
+        var adresse = document. getElementByTd("adresse");
+        var gouvernorat = document. getElementByTd("gouvernorat");
+        if (xmlhttp.readystate == 4) {
+            if (xmlhttp. status == 200) {
+                var resultat = JSON. parse(xmlhttp.responseText);
+                reference.value ="";
+                adresse.value = "";
+                gouvernorat.value = "";
+                for(var i in resultat){
+                    reference.value = reference.value+" "+resultat[i]. reference;
+                    adresse.value = adresse.values+" "+resultat[i].adresse;
+                    gouvernorat.value = gouvernorat.value+" "+resultat[i].gouvernorat;
+                }
+            }else
+                alert("Error ->" + xmlhttp. responseText);
+        }
+    };
+</script>
+</html>
