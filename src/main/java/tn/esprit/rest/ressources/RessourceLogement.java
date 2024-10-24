@@ -34,7 +34,7 @@ public class RessourceLogement {
     }
 
 
-    @GET
+    /*@GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getLogementsByDelegation(@QueryParam("delegation") String delegation) {
          List<Logement> l=logB.getLogementsByDeleguation(delegation);
@@ -62,6 +62,6 @@ public class RessourceLogement {
     @Path("{id}")
     public Response deleteLogement(@PathParam("id") int reception) {
         return logB.deleteLogement(reception) ? Response.status(Status.OK).build() : Response.status(Status.NOT_FOUND).build();
-    }
+    }*/
 }
 
